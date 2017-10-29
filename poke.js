@@ -41,7 +41,7 @@ const getName = ($)  => $('.pokedex-pokemon-pagination-title')[0].children[1].ch
 
 const getNumber = ($) => $('.pokedex-pokemon-pagination-title')[0].children[1].children[1].children[0].data.split('#')[1]
 
-const getDescription = ($) =>  $('.version-y')[0].children[0].data.split(' ').filter(c => c!= '').join(' ').split('\n').filter(c=>c!='').join(' ').split('').filter((a,b,c) => b!=0).join('')
+const getDescription = ($) => $('.version-y')[0].children[0].data.split(' ').filter(c=>c!= '').join(' ').split('\n').filter(c=>c!='').join(' ').split('').filter((a,b,c)=>b!=0).join('')
 
 
 const getPokemon = ($) => ({
