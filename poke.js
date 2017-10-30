@@ -16,7 +16,7 @@ function start () {
     } else {
       var arr = JSON.parse(data)
       console.log(arr)
-      getImageRecursive(arr.length == 0 ? 1 : arr.length, arr)
+      getImageRecursive(arr.length == 0 ? 1 : arr.length + 1, arr)
       .then(images => {
         console.log(images)
         writeFile(images)
@@ -65,7 +65,7 @@ function getImageRecursive (idx, arr) {
         .catch(err => {
           console.log(err)
         })
-      if (idx == 805) resolve(images)
+      if (idx >= 805) resolve(arr)
       else resolve(getImageRecursive(idx + 1, arr))
       // console.log(res.text);
     })
